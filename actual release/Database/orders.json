@@ -1,0 +1,165 @@
+{
+  "lastCode": "22",
+  "array": [
+    {
+      "code": "1",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-04-24",
+      "cost": "500",
+      "dis": "0"
+    },
+    {
+      "code": "2",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-04-24",
+      "cost": "500",
+      "dis": "0"
+    },
+    {
+      "code": "3",
+      "clientCode": "3",
+      "haircutCode": "3",
+      "date": "2026-04-24",
+      "cost": "485",
+      "dis": "1"
+    },
+    {
+      "code": "4",
+      "clientCode": "2",
+      "haircutCode": "4",
+      "date": "2026-04-24",
+      "cost": "485",
+      "dis": "1"
+    },
+    {
+      "code": "5",
+      "clientCode": "2",
+      "haircutCode": "5",
+      "date": "2026-04-24",
+      "cost": "345",
+      "dis": 0
+    },
+    {
+      "code": "6",
+      "clientCode": "1",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "35345",
+      "dis": 0
+    },
+    {
+      "code": "7",
+      "clientCode": "1",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "5656",
+      "dis": 0
+    },
+    {
+      "code": "8",
+      "clientCode": "1",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "5656",
+      "dis": 0
+    },
+    {
+      "code": "9",
+      "clientCode": "1",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "5654",
+      "dis": 0
+    },
+    {
+      "code": "10",
+      "clientCode": "1",
+      "haircutCode": "1",
+      "date": "2024-04-27",
+      "cost": "454",
+      "dis": 0
+    },
+    {
+      "code": "11",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "4544545",
+      "dis": 0
+    },
+    {
+      "code": "12",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": "4544545",
+      "dis": 0
+    },
+    {
+      "code": "13",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2026-04-24",
+      "cost": 92.15,
+      "dis": 1
+    },
+    {
+      "code": "14",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-04-23",
+      "cost": 53.2,
+      "dis": 1
+    },
+    {
+      "code": "15",
+      "clientCode": "3",
+      "haircutCode": "2",
+      "date": "2026-04-24",
+      "cost": 644725.1,
+      "dis": 1
+    },
+    {
+      "code": "16",
+      "clientCode": "2",
+      "haircutCode": "3",
+      "date": "2024-02-27",
+      "cost": 55051.38,
+      "dis": 1
+    },
+    {
+      "code": "17",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-07-29",
+      "cost": 43.65,
+      "dis": 1
+    },
+    {
+      "code": "19",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-07-29",
+      "cost": 291,
+      "dis": 1
+    },
+    {
+      "code": "21",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-07-29",
+      "cost": "47",
+      "dis": 0
+    },
+    {
+      "code": "22",
+      "clientCode": "2",
+      "haircutCode": "1",
+      "date": "2024-07-29",
+      "cost": 291,
+      "dis": 1
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div id="bg">
+      <!-- <video autoplay muted loop class="bg-video">
+      <source src="bg2.mp4" type="video/mp4">
+    </video> --> 
+      <img src="bg.png" id="bg-img">  
+   <div id="quitBtn"></div>
+   <div id="fullBtn"></div>
+   <div id="closeBtn"></div>
+   <div id="nameWindow">salon</div>
+
+ <div id="frame">
+  <div id="dragBar" class="dragable"><div id="lineBar"></div></div>
+     <div id="mainMenu">
+
+      <div  id="Name">Salon DataBase</div>
+      <div id="mainBtns">
+        <div class ="outshape" id="clientBtn">Клиенты</div>
+        <div class ="outshape" id="hairBtn">Услуги</div>
+        <div class ="outshape" id="OrderBtn">История Заказов</div>
+        <div  class ="outshape" id="CreateBtn">Создать заказ</div>
+      </div>
+
+    </div>
+    <div id="client" >
+  <div  class="titl" id="clientName">Клиенты</div>
+
+
+      <div id="searchSection" class="outshape searchSection">
+
+          <div class="outshape searchBack" id="searchBack" > <div class="back-img"></div></div>
+          <div  class="searchArticle" id="searchArticle" >Введите данные клиента</div>
+
+
+        <input id="F" type="text" class="inshape F" placeholder="Фамилия">
+        <input id="I"  type="text"class="inshape I" placeholder="Имя">
+        <input id="O" type="text"class="inshape O" placeholder="Отчество">
+        <input id="D"  type="date" class="inshape D" placeholder="Дата">
+        <div class="genderSelector outshape">
+          <div class="male  ">&#128104</div>
+          <div class="female">&#128105</div>
+        </div>
+        <div  id="searchClient"  class="outshape roundBtn searchClient"><div class="search-img"></div></div>
+       <div class="status"  id="clientStatus"></div>
+      </div>
+      <div class="back outshape clientBack" > <div class="back-img"></div></div>
+      <div class ="bar">
+      <div id="clientNum" class="num"></div>
+      <div class="btnSection" id="btnSection">
+
+        <div  id="search"  class="outshape roundBtn"><div class="search-img"></div></div>
+      <div id="add" class="outshape roundBtn"><div class="add-img"></div ></div>
+      <div id="edit" class="outshape roundBtn"><div class="edit-img"></div></div>
+      <div id="del" class="outshape roundBtn"><div class="del-img"></div></div>
+    </div>
+  </div>
+    <div id="clientList" class="inshape list"></div>
+   </div>
+
+   <div id="hair" >
+    <div  class="titl" id="hairName">Услуги</div>
+
+
+        <div id="searchSectionHair" class="outshape searchSection">
+
+            <div class="outshape searchBack" id="searchBackHair" > <div class="back-img"></div></div>
+            <div  class="searchArticle" id="searchArticleHair" >Введите данные услуги</div>
+
+
+          <input id="H" type="text" class="inshape O" placeholder="Название услуги">
+          <input id="cost"  type="number" min="0" class="inshape F" placeholder="Цена в рублях">
+
+
+          <div class="genderSelector outshape">
+            <div class="male  ">&#128104</div>
+            <div class="female">&#128105</div>
+          </div>
+          <div  id="searchHair"  class="outshape roundBtn searchClient"><div class="search-img"></div></div>
+         <div class="status"  id="hairStatus"></div>
+        </div>
+        <div class="back outshape clientBack" > <div class="back-img"></div></div>
+        <div class ="bar">
+          <div id="hairNum"  class="num"></div>
+        <div class="btnSection" id="btnSectionHair">
+          <div  id="searchBtnHair"  class="outshape roundBtn"><div class="search-img"></div></div>
+        <div id="addHair" class="outshape roundBtn"><div class="add-img"></div ></div>
+        <div id="editHair" class="outshape roundBtn"><div class="edit-img"></div></div>
+        <div id="delHair" class="outshape roundBtn"><div class="del-img"></div></div>
+      </div>
+    </div>
+      <div id="hairList" class="inshape list"></div>
+     </div>
+
+
+   <div id="order">
+    <div class="titl" id="orderName">История заказов</div>
+
+
+        <div id="searchSectionOrder" class="outshape searchSection">
+
+            <div class="outshape searchBack" id="searchBackOrder" > <div class="back-img"></div></div>
+            <div class="searchArticle" id="searchArticleOrder" >Введите данные заказа</div>
+
+
+        <div id="orderInput">
+          <input  id="FO" type="text" class="inshape F" placeholder="Фамилия">
+          <input id="IO"  type="text"class="inshape I" placeholder="Имя">
+          <input id="OO" type="text"class="inshape O" placeholder="Отчество">
+          <div class="genderSelector outshape" id="genderSelectorOrder">
+            <div class="male  ">&#128104</div>
+            <div class="female">&#128105</div>
+          </div>
+          <input id="HO"  type="text" class="inshape H" placeholder="Название услуги">
+          <input id="DO"  type="text" class="inshape D"  placeholder="Дата заказа"  onfocus="(this.type='date')" onblur="(this.type='text')">
+        </div>
+
+
+          <div id="searchOrders"  class="outshape roundBtn searchClient"><div class="search-img"></div></div>
+          <div class="status"  id="orderStatus"></div>
+        </div>
+        <div class="back outshape clientBack"> <div class="back-img"></div></div>
+        <div class ="bar">
+          <div id="orderNum"  class="num"></div>
+        <div class="btnSection" id="btnSectionOrder">
+
+          <div id="searchOrder"  class="outshape roundBtn"><div class="search-img"></div></div>
+          <div id="editOrder" class="outshape roundBtn"><div class="edit-img"></div></div>
+          <div id="delOrder" class="outshape roundBtn"><div class="del-img"></div></div>
+      </div>
+    </div>
+      <div id="orderList" class="inshape  list"></div>
+     </div>
+    <div id="create" >
+      <div class="titl" id="createName">Создание заказа</div>
+
+      <div id="searchSectionCreate"  class="outshape searchSection createWindow">
+
+          <div class="searchArticle" id="searchArticleCreate" >Введите данные заказа</div>
+
+
+      <div id="createInput">
+        <input  id="FC" type="text" class="inshape F" placeholder="Фамилия">
+        <input id="IC"  type="text"class="inshape I" placeholder="Имя">
+        <input id="OC" type="text"class="inshape O" placeholder="Отчество">
+        <div class="genderSelector outshape" id="genderSelectorCreate">
+          <div class="male  ">&#128104</div>
+          <div class="female">&#128105</div>
+        </div>
+        <input id="DB"  type="text" class="inshape D"  placeholder="Дата рождения"  onfocus="(this.type='date')" onblur="(this.type='text')">
+        <input id="HC"  type="text" class="inshape H" placeholder="Название услуги">
+        <input id="ODC"  type="text" class="inshape D" placeholder="Дата заказа" onfocus="(this.type='date')" onblur="(this.type='text')">
+        <input id="costC"  type="number" min="0" class="inshape F" placeholder="Другая цена в рублях">
+      </div>
+
+
+        <div id="createOrder"  class="outshape roundBtn searchClient"><div class="add-img"></div></div>
+        <div class="status"  id="createStatus"></div>
+      </div>
+      <div class="back outshape clientBack"> <div class="back-img"></div></div>
+
+    </div>
+
+
+  </div>
+
+    </div>
+
+<script>console.log("%c⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄⠄⠠⠄\n⠄⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⠐⡀⠂⡐⢀⢂⠐⡀⠂⡐⠄⠂⡐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⢂⠐⠄⠂⠄\n⠄⢁⠐⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⡈⠠⠄⠨⢀⢢⢡⢢⢣⢢⢣⢢⢱⢠⠨⠄⠄⢈⠄⡀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠁⠄⢀⠡⠐⠄\n⠄⠄⠠⠁⢀⠐⠄⠄⠂⠐⢀⠐⠄⠄⠂⠐⢀⠐⠄⠄⠂⠐⢀⠐⠄⠄⠂⠐⢀⠐⠄⠄⠂⠐⢀⠐⢀⠐⠄⠂⡀⠂⠐⠄⠄⢡⢨⢢⢣⢣⢣⢣⢣⢣⢣⢣⢣⢣⢣⠨⠄⠠⠐⠈⠄⠄⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠂⠠⠐⠄⠂⡀⠐⠄\n⠄⠂⠐⠈⢀⠄⡁⠐⠈⠠⠄⠄⢁⠐⠈⠠⠄⠄⢁⠐⠈⠠⠄⠄⢁⠐⠈⠠⠄⠄⢁⠐⠈⠠⠄⡐⠄⠄⢁⠐⢀⠈⡀⠡⡘⡜⡜⡜⡜⡜⡜⡜⡜⡜⡜⡜⡜⡜⡜⢜⠨⠄⠂⡈⢀⠂⢁⠈⠠⠄⡈⠄⠂⠁⠄⠠⠈⡀⠂⠁⠄⠠⠈⡀⠂⠁⠄⠠⠈⡀⠂⠁⠄⠠⠈⡀⠂⠁⠄⠠⠈⡀⠂⠁⠄⠠⠈⡀\n⠄⡈⢀⠁⠄⠠⠐⠈⠄⢂⠐⠠⠄⡐⠈⠄⠂⠐⢀⠐⠈⠄⠂⠐⢀⠐⠈⠄⠂⠐⢀⠐⠈⠄⠂⡀⠂⠐⠄⠄⠂⢀⠐⢨⢪⢪⢪⢪⢪⢪⢪⢪⢪⢪⢪⢪⢪⠪⡪⠪⠨⢀⠁⠠⠄⠄⠠⠐⠄⡁⠠⠈⡀⢁⠐⠄⠂⡀⠂⠁⠐⠄⠂⡀⠂⠁⠐⠄⠂⡀⠂⠁⠐⠄⠂⡀⠂⠁⠐⠄⠂⡀⠂⠁⠐⠄⠂⡀\n⠄⠄⢀⠂⠐⠄⠂⡈⢀⠂⢀⠂⠐⠄⠄⢁⠈⠄⠂⠠⠈⡀⢁⠈⡀⠄⠈⠄⢁⠈⡀⠄⢈⠄⡁⢀⠈⡀⠁⠄⠂⠠⠐⢐⢕⢕⠕⡕⡜⡌⡎⡎⡎⡪⡪⡢⡣⡣⡣⡩⠨⠄⠄⢁⠐⠄⢂⠠⠁⢀⠐⠄⠄⠠⠄⠡⠐⠄⠄⢁⠈⡀⢁⠠⠄⡁⠈⠄⠁⡀⠄⢁⠈⡀⢁⠠⠄⡁⠈⠄⠁⡀⠄⢁⠈⠄⠁⡀\n⠄⠐⢀⠐⠈⡀⢁⠠⠄⠐⢀⠄⠡⠐⠄⠂⡀⠂⠐⠄⠂⠠⠄⠂⡀⠄⠁⠄⠠⠄⠄⠐⠄⠄⠠⠄⠂⠠⠈⡀⢈⠠⢐⠨⡪⡪⡪⠢⡣⡑⢕⠱⠑⠕⠱⡑⠕⠜⠔⢌⠄⠡⢐⡀⠄⢁⠠⠄⠂⡀⠂⠁⠐⢀⠁⠐⠄⠂⠐⠄⠄⠐⢀⠠⠐⠄⡈⠄⠂⠠⠐⠄⠄⠐⢀⠄⠂⡀⠁⠄⠁⡀⠄⠠⠐⠄⢁⠄\n⠄⡁⠄⠐⠄⠄⠠⠄⡈⠄⠂⢀⠁⠄⢈⠠⠄⡈⢀⠁⠌⠄⠌⢀⠠⠐⠄⢂⠠⠁⠐⠈⠄⢂⠠⠁⢈⠠⠐⠄⠄⠨⠨⠢⡣⠣⠨⠐⢀⠘⠄⠄⠡⡨⠄⠄⢂⠂⠁⠄⠨⠨⠂⠄⠐⢀⠄⠂⠁⡀⠄⢁⠈⡀⠄⢁⠈⠄⢁⠈⠠⠈⢀⠠⠐⠄⠄⢁⠈⠠⠐⠄⠂⢁⠠⠄⡁⠄⢂⠠⠁⠄⠄⠂⡀⠁⠄⢀\n⠄⠠⠐⠈⠄⠂⡐⠄⠄⢀⠂⠠⠐⠄⠂⠠⠐⠄⠄⠐⢀⠁⠄⠠⠄⡐⠈⢀⠠⠄⡁⠈⠄⠂⢀⠐⠄⠄⠐⠄⢂⠨⡡⢑⢜⠌⠔⠈⡀⠄⠁⠄⡱⡰⠈⠠⠄⠂⢁⠐⢅⠅⠂⢕⠈⠄⠄⢁⠐⠄⠄⠂⠠⠄⠄⠠⠐⠄⠄⠂⠁⠐⢀⠠⠐⠄⢂⠄⠂⠁⡀⢁⠈⡀⠠⠄⡐⠈⢀⠠⠄⡁⠄⠂⠠⠈⠠⠄\n⠄⠂⠐⠈⡀⢁⠠⠐⠈⢀⠄⢂⠠⠁⢈⠠⠐⠄⠂⢁⠠⠄⠂⠠⠁⢀⠐⢀⠠⠐⠄⡈⠠⠐⠄⠄⠁⠐⠈⡀⠂⠄⢪⠢⡡⠑⡁⡁⠠⡠⢁⢎⢎⢎⢕⠠⡁⡈⡀⠨⠐⠄⠕⠅⢀⠁⠐⢀⠐⠄⠂⠐⠄⠂⠐⡀⠂⢁⠄⠂⢁⠈⡀⠠⠐⠈⢀⠄⡁⠐⠄⠄⠠⠄⠂⠠⠄⠂⠠⠄⠂⡀⠄⠂⠐⠈⡀⠄\n⠄⡁⢈⠠⠄⠄⠠⠐⠈⢀⠐⢀⠄⠂⠠⠄⡐⠈⠠⠄⠄⠂⠁⠐⠈⢀⠠⠄⠄⠐⠄⠄⠂⠐⠄⠂⢁⠈⠠⠄⡈⠄⠂⠊⢔⠄⡂⠄⠡⡂⢅⠈⡀⠡⠈⡐⡄⢅⠂⡁⠄⢁⠈⠄⢀⠂⢁⠠⠄⡁⢈⠠⠁⡈⠄⠄⠂⠠⠄⡁⠄⠠⠄⡐⢀⠈⡀⠄⠠⠈⡀⠂⠄⢁⠈⠠⠈⡀⠂⡈⠄⠄⠄⠂⠁⠄⠠⠄\n⠄⠠⠄⠄⠂⠐⠄⠂⡈⠄⠄⢀⠂⠁⠄⠁⡀⠐⡀⠂⠐⢀⠁⡈⠄⠂⠄⠂⠠⠁⢈⠄⠂⢁⠈⡀⠂⡀⠁⠄⠠⠄⠂⡈⡐⠄⢂⢈⠪⡘⠔⠕⠰⠐⠱⢨⠊⠆⢂⠄⢂⠠⠐⠈⡀⠄⠠⠄⠂⠠⠄⠄⠠⠄⠄⢁⠈⡀⠂⠠⠐⠄⠂⠠⠄⠄⠠⠐⠄⠂⡀⠂⠐⠄⠄⠁⠄⢀⠂⠠⠈⢀⠁⡈⢀⠂⠐⡀\n⠄⠂⠁⡀⠂⢁⠈⠠⠄⠂⡈⢀⠄⢂⠠⠁⠄⠂⡀⠌⠄⠂⠠⠄⠄⠂⠁⡈⠠⠈⢀⠄⡁⠄⠠⠄⠂⠠⠈⡀⠂⡈⠠⠄⠄⡁⢂⠐⠠⢀⢁⠢⠒⠌⠢⢀⠂⠑⡀⠐⡀⠐⠈⠠⢀⠐⠄⠌⠄⢂⠐⠄⢂⠐⠠⠄⠄⠠⠈⠠⠐⠈⢀⠂⠐⢀⠂⠠⠁⠄⠠⠈⡀⢁⠐⠈⠄⠄⠐⢀⠈⡀⠄⠠⠄⠄⠁⡀\n⠄⡈⠠⠄⠂⠠⠐⠄⠌⠄⠄⠠⠐⠄⠠⠄⡁⠂⡀⠐⠈⡀⠂⠐⠄⠂⠁⡀⠐⠈⢀⠠⠄⠐⡀⢈⠄⠂⠄⢀⠂⢀⠂⢁⠠⠄⠄⠨⠐⡀⠄⢂⢐⡀⠌⡀⡈⠠⠄⠂⠠⠈⡀⢁⠐⡀⠁⠄⠁⠄⢀⠁⠄⠐⠄⠂⡈⠠⠈⠠⠐⠈⢀⠄⡁⠄⠐⠄⠂⠐⠄⠂⠠⠄⠐⠈⡀⠂⢁⠠⠄⠄⠐⠄⢂⠠⠁⠄\n⠄⠄⠂⢈⠄⠂⠄⠁⠄⠁⠐⠄⠂⠁⠄⠁⠠⠄⠄⢈⠠⠄⡈⠠⠁⡈⠠⠐⠈⢀⠂⢀⠈⠠⠄⠄⠂⠁⠐⢀⠐⠐⡀⠄⢀⠂⢈⠄⠡⠐⢈⠈⡐⠈⡑⠠⠄⠂⡈⢀⠁⠄⠐⠄⠄⠂⡈⠄⠂⡈⠄⠄⠂⠁⡈⠠⠄⠂⠐⠄⠂⡈⠄⠄⠠⠐⠈⢀⠁⡈⠄⠁⠄⢁⠈⠠⠄⠂⠠⠄⠂⡀⢁⠈⡀⠠⠄⡁\n⠄⠐⠈⢀⠄⡁⠄⠁⡀⢁⠈⡀⠡⠐⠄⡁⠐⡀⠌⠄⠠⠄⡐⠄⠂⡀⠂⠐⠈⢀⠠⠄⡈⢀⠂⠐⢀⠁⡈⡠⡠⡃⠄⠄⠂⠄⠂⢈⠄⢂⠠⢀⠐⠄⠄⠂⡈⠠⠄⠂⡀⠂⢁⠐⡈⠄⠠⠈⠠⠄⠂⠐⠈⡀⠄⠂⡀⠡⠈⡀⢁⠄⠂⠐⠄⠂⡈⠄⠄⠠⠐⠄⢂⠄⠂⢁⠄⠡⠐⠈⠄⠄⠠⠄⠄⠂⠠⠄\n⠄⢁⠈⡀⠄⠠⠐⢀⠐⠄⠄⠐⠄⠂⠁⡀⠂⠄⠄⢈⠄⠂⡀⠂⠁⡀⠄⢁⠈⡀⠠⠐⠄⠄⡀⡅⡔⡌⢊⢂⠢⡡⠐⢀⠈⠄⠁⠄⠐⠄⠄⠠⠄⠡⠐⠄⠄⠂⢈⠠⠄⡈⠠⠐⡀⠌⡠⢑⠄⠡⡈⢀⠁⠠⠄⠂⡀⠂⠠⠐⠄⠄⢁⠈⠄⠁⡀⠂⠐⠄⠂⢁⠠⠄⡁⠄⢀⠁⠄⠈⠄⠂⠁⠐⠄⠌⠄⠂\n⠄⠄⠂⠄⠄⠂⠐⢀⠄⡁⠄⠁⡈⢀⠁⠠⠄⠡⠐⠄⠄⢁⠠⠄⡁⠄⠄⠠⠄⠄⡂⢤⠱⡘⡌⡆⡕⡨⠰⢀⠪⠐⢨⠠⠐⠄⡁⠐⠈⡀⠂⠠⠁⠐⡀⢁⠐⠈⡀⠄⠂⢀⢂⠁⠠⠐⡐⠨⡈⡪⡂⢆⠨⠠⢈⠠⠄⡈⢀⠂⠁⠠⢀⠐⠄⡁⢀⠈⡀⢁⠈⡀⠠⠄⠄⠐⢀⠐⠄⡁⠄⠂⠁⡈⢀⠂⠁⠄\n⠄⠐⢀⠁⠄⠂⠁⠠⠄⠄⠐⠄⠄⡀⠂⠠⠁⠐⢀⠁⠄⠠⠄⠂⠠⡈⢤⢒⠕⡕⢕⢱⢑⠕⢅⢣⠱⡑⠕⠄⡑⢈⠄⠌⠨⠄⠄⢈⠠⠄⡈⠠⠈⠠⠄⠄⢀⠁⠠⠄⠌⠠⠄⠂⢁⠡⠨⢐⠐⡐⢜⢜⢸⢘⢔⢠⢁⠠⠄⠄⢁⠐⠄⠄⠁⡀⠄⠠⠐⠄⠄⢀⠂⠐⢀⠁⠠⠄⡁⠄⠄⠂⠁⡀⠄⠐⠄⠂\n⠄⡁⠄⠐⠄⠂⢁⠐⠄⠂⢁⠈⡀⠄⢈⠠⠈⠠⠄⡐⠄⢂⠌⡪⢊⢎⠊⡆⠕⡑⢅⠕⡅⠝⡌⢆⠑⡈⡐⠡⠐⢀⠐⠄⠂⡁⠐⠄⠄⠂⠄⠂⡈⠄⠂⡈⠄⠄⢁⠐⠄⠌⠠⠁⡐⠠⢁⠂⡂⠌⠄⢅⢊⢢⠱⡨⡂⠎⢂⢒⢄⢂⠑⡀⢁⠄⡐⠄⠂⠐⠈⢀⠄⡁⠄⠐⢀⠁⡀⠂⠐⢀⠁⡀⠄⢈⠄⡁\n⠄⠠⠐⠈⢀⠁⠠⠄⡁⢈⠄⠠⠄⠄⠠⠄⠂⠠⠁⢀⠈⡀⠕⠈⢂⢐⠡⠈⠄⠅⠂⠌⣊⠪⠠⠁⡂⢐⠠⠑⠈⠄⠠⠁⠐⡀⠌⢀⢂⠈⡀⢁⠠⠈⠠⠄⡈⠠⠄⠄⢁⠐⢀⠂⢐⠈⠄⡂⠄⡑⠌⡂⠎⡐⡁⠆⡂⠡⠐⠄⢂⠨⠄⠄⠂⠠⠄⡈⢀⠁⡈⠄⠄⠠⠐⠈⢀⠠⠄⡈⠠⠄⠄⠠⠐⠄⠄⠄\n⠄⠂⠐⠈⢀⠐⠄⡁⠠⠄⠄⢁⠐⠄⠂⡈⢀⠂⢈⠄⠄⠠⢀⠡⠐⠐⡀⠡⠐⠈⢈⠐⡐⢈⠐⡈⠠⠂⡂⠅⠈⢄⠁⡈⠠⠄⡐⠄⠂⠂⠠⠄⠄⠂⢁⠠⠐⠄⠂⡐⠄⡐⠄⡐⢀⠂⠡⠐⡈⠄⡑⠨⢈⠂⠌⡐⠄⠂⠄⠁⠄⠐⠄⠂⠡⠐⢀⠐⠄⠄⠐⠈⡀⠐⢀⠈⡀⠠⠄⠄⠂⠐⢀⠂⠐⠄⠂⠁\n⠄⡈⠄⠁⠠⠄⡁⠠⠐⠄⠂⠠⠄⡁⠐⠄⠄⠐⠄⠄⠂⡐⠁⠠⠐⠄⠄⠂⠠⠁⠠⠐⠄⢂⠄⠂⡁⠂⡂⠅⢈⠰⢀⢐⢀⠁⠠⠈⡀⠡⠐⠐⠐⢈⠠⠄⠂⢁⠐⢀⠐⠄⠂⠄⠐⢈⠠⢁⠂⠅⠌⠌⡂⠡⠁⠠⠈⡀⠂⡁⢈⠄⠡⠈⠠⠐⠄⠄⠁⠐⠈⡀⠄⢈⠄⠄⢀⠂⠐⡀⠌⠄⠂⡀⢁⠈⡀⠁\n⠄⠠⠐⠈⠄⠂⠠⠐⢀⠈⠄⠁⠄⠐⠈⠄⠂⢁⠐⠄⢂⠠⠈⠠⠄⡁⠐⠈⡀⢈⠠⠈⡀⠂⡈⠠⠐⢀⠂⠅⠠⠠⢁⢂⢂⠅⢂⠐⠄⠄⠡⢁⠅⠡⠄⠌⠠⠠⠐⢀⠄⠡⠠⢁⠈⠄⢂⠂⠌⠨⢊⠐⡀⠂⠁⠄⢁⠄⠂⠠⠄⠌⠄⠌⢀⠐⠄⠂⢁⠈⠠⠄⠄⠠⠐⠄⠄⡀⢁⠄⠄⢈⠠⠄⠄⠠⠄⡁\n⠄⠂⠐⠈⡀⢁⠐⠄⠄⠐⠄⢂⠠⠁⢈⠄⡁⠄⢀⠡⠄⠄⠂⠁⠠⠐⠈⠄⠄⠠⠄⠂⡀⠂⡀⠂⠐⢀⠊⡐⠄⡊⡐⠄⡢⡊⠄⠠⠁⠠⡁⠂⠐⡀⢂⠡⠐⠄⠌⠠⠠⡁⠂⠔⠄⠌⡐⢨⠨⢈⠄⢂⠠⠈⠠⠈⡀⠄⠁⠄⠁⠄⢁⠐⠄⠄⢁⠈⡀⠐⠄⠂⠐⡀⠂⢁⠠⠄⠄⠐⠄⠄⢀⠂⠐⢀⠁⡀\n⠄⡈⠄⠁⡀⠄⢀⠁⠄⢁⠈⡀⠠⠐⠄⠄⠠⠐⠄⡀⠂⠐⢀⠁⠐⡀⠌⠄⠂⢁⠠⠁⠠⠐⢀⠈⠄⠂⢂⠐⠄⠄⠂⠑⡄⡇⠅⠂⠁⠌⠄⠌⠠⠐⡀⢂⠠⠁⠌⢄⠅⠠⠁⠅⠈⠄⡂⠂⢂⠄⢂⠠⠄⠌⠄⠂⠠⠄⡁⠄⠁⡐⠄⠐⠈⡀⠄⠠⠐⠈⡀⠁⠂⡀⠂⠠⠄⠂⡀⢁⠈⠠⠄⠄⠁⠄⠠⠄\n⠄⠠⠄⠂⡀⠐⢀⠐⠄⠄⠠⠄⠂⡀⢁⠐⠄⠂⠁⠂⢈⠠⠄⠂⠁⡀⠄⠈⠄⠂⢀⠐⠄⢂⠐⠄⠂⡈⠠⠄⠡⠐⠈⡀⢊⢂⠅⡈⠄⠈⠄⠂⡠⢁⠂⠄⠠⠈⠌⡐⢁⠌⠈⠄⠁⢂⠂⠁⠄⠂⠠⠐⠄⠂⡁⢈⠄⠂⠠⠄⡁⠠⠈⡀⢁⠠⠐⠄⠂⠐⢀⠈⠠⠄⡈⠄⠂⠁⡀⠄⠂⠁⠐⢀⠁⠐⠄⠂\n⠄⠂⡈⠠⠄⡈⠄⠄⠁⡐⠄⡁⠄⠐⢀⠠⠁⢈⠄⡁⠄⠄⠂⠁⠄⠠⠄⡁⠄⢈⠄⠄⠁⠄⢀⠡⠐⠄⡐⠈⡀⠂⢁⠠⠐⡠⢃⠠⠄⡁⡐⠠⠐⠄⠂⡈⠠⠁⠅⠐⡀⢂⠡⠨⠄⡁⠄⢁⠐⠈⡀⠂⢁⠐⠄⠄⠂⢁⠐⠄⠄⠂⠠⠄⠄⢀⠂⢈⠄⡁⠄⠠⠁⠠⠐⠈⢀⠁⡀⠄⠂⠁⡈⠄⠄⢁⠈⡀\n⠄⢁⠠⠐⠄⡐⠈⠄⠂⡀⠂⡀⠐⠈⢀⠠⠐⠄⠄⠠⠄⡁⢈⠄⠂⡐⠄⠄⠐⠄⠄⠂⠁⠐⠄⠄⠂⠁⡀⠂⡀⠅⠐⢀⠡⠠⠡⠐⠠⠄⠄⠐⢀⠁⡐⡀⠄⠅⡂⠅⠂⡁⠐⡀⢁⠠⠐⢀⠠⠁⡀⠌⠄⠄⠁⠄⢈⠄⠄⠁⡐⠈⠄⢂⠈⡀⠄⠂⠠⠄⡐⠄⠌⠄⠂⡈⠄⠄⠄⠄⠂⠁⡀⠂⠐⠄⠄⠄\n⠄⠄⠠⠐⠄⠄⠂⠁⠄⢀⠂⠠⠈⠠⠄⠄⠐⠄⢂⠐⠄⠄⡀⠂⠁⡀⠐⡀⢁⠐⠄⠂⢁⠈⡀⠂⠠⠁⠠⠐⢀⠐⠈⡀⠠⠄⠂⠐⢀⠂⠄⠁⠄⡠⠠⠂⠐⡀⠂⠂⢁⠄⢂⠠⠄⠄⠂⠠⠄⠂⡀⠐⠄⠂⢁⠐⢀⠐⠄⡁⠠⠈⡀⠂⡀⠄⢀⠂⠐⡀⠄⠂⡀⠡⠐⠄⡐⠄⡁⠐⠄⡁⠠⠄⡁⢈⠄⡁\n⠄⠐⡀⠂⠁⡀⠂⠁⠐⠄⠄⠂⢈⠄⠂⠠⠁⡈⢀⠄⡁⠄⠄⠂⠁⡀⠂⠠⠄⠄⢁⠈⡀⠄⠠⠈⡀⠂⠐⠄⠂⡀⢁⠠⠐⠈⡀⠁⠄⡀⠂⠅⠅⠐⡀⠌⠐⠄⠄⠁⠄⠐⠄⠄⠂⠐⠈⡀⠂⢁⠠⠈⡀⠁⠄⠐⢀⠄⡁⠠⠐⠄⠄⠂⢀⠐⢀⠠⠁⠄⠄⠂⠄⠂⡀⢁⠠⠐⠄⡈⠠⠄⡐⠄⠄⡀⠂⠄\n⠄⢁⠄⠄⢁⠄⠂⢁⠈⡀⠂⢈⠄⡀⠡⠐⠄⠄⠠⠄⠄⢀⠁⡈⠠⠄⠂⠐⡀⠂⠠⠄⠄⠐⢀⠂⠠⠈⡀⠡⠐⠄⠄⠠⠐⢀⠐⠈⡀⠄⠁⢂⠈⠠⠄⠌⢀⠡⠄⡁⠄⢁⠈⠠⠈⡀⢁⠠⠐⠄⠄⠂⠠⠈⠠⠈⡀⠄⢀⠂⡀⠁⠄⢈⠄⠄⠠⠄⠂⢁⠠⠈⡀⢁⠠⠄⠄⠐⠄⠄⠂⠠⠄⠂⠄⠠⠈⡀\n⠄⠄⠐⠄⠄⠠⠁⠠⠄⠄⢈⠄⠄⠄⢂⠄⡁⠐⢀⠁⠐⡀⠐⢀⠐⠈⢀⠁⡀⢈⠄⢂⠠⠁⠠⠐⢀⠂⢀⠂⢀⢁⠐⠄⢂⠠⠄⡁⠠⠄⡁⠄⠠⠁⠐⡀⠂⡀⠂⠠⠐⠄⠄⠁⠄⠠⠄⠄⠂⢁⠄⢂⠐⠈⡀⠄⠠⠐⠄⠠⠄⠌⠠⠄⠂⠐⡀⠌⠠⠄⠄⠂⠠⠄⠄⠂⡀⢁⠈⡀⢈⠠⠈⡀⠂⠐⡀⠄\n⠄⠂⠁⡈⠄⠂⡈⠄⠂⠐⡀⠄⠂⡁⡄⡤⡰⡸⡰⡸⡰⡰⡸⡠⡢⢌⡀⠄⠠⠄⠂⠠⠄⠂⠐⠈⢀⠄⠂⡀⠂⡀⠄⠁⠄⢀⠂⠠⠐⠄⠄⠂⠐⠈⡀⠄⠂⠄⠂⢁⠐⠄⠂⢁⠐⢀⠁⠄⢈⠄⠐⢀⠐⠄⠄⠐⠄⠂⡁⢄⠥⡰⡰⡊⡆⡕⣔⡒⡆⡆⡔⡠⡂⠐⡀⠂⠠⠄⠄⠐⢀⠠⠄⠄⢈⠠⠄⡀\n⠄⡈⠠⠄⠌⠠⢐⢈⠬⡰⡐⡆⡇⡎⢎⠪⡘⡜⡸⡸⡸⡘⡌⡎⡎⡎⡎⡇⣕⡀⢁⠐⠈⢀⠁⡈⠄⠄⠁⠠⠄⠄⠠⠁⠐⢀⠐⠄⠂⢁⠠⠈⡀⢁⠠⠄⠌⢀⠁⠄⢀⠁⡈⠄⠄⠠⠐⠄⠄⠂⢁⠠⠄⡁⠄⢁⠨⡢⡣⡣⡣⡣⡣⡣⠣⡣⡣⡪⢪⢘⠜⡜⢜⢜⢔⠬⡰⣐⡈⠄⠂⠄⠂⡈⢀⠠⠄⠄\n⠄⡀⠂⠐⡐⢕⢑⠑⠕⠡⡁⠣⠑⠨⠂⠕⠌⢆⠕⡌⢆⢪⠸⡨⡪⡪⡪⡪⢢⠱⠄⡀⠁⠄⠠⠄⢂⠠⠁⠐⠄⢂⠐⠈⠠⠄⠄⢁⠈⡀⠠⠄⠄⠠⠄⠂⠐⢀⠐⠄⠂⠠⠐⠈⠄⢂⠠⠁⠐⠈⢀⠠⠄⠄⠠⠄⢎⢪⢪⢪⢪⢪⢪⢢⢃⠕⡱⡘⢌⠢⢑⠘⠄⠃⠅⡑⢑⠰⠑⢍⠪⡈⠠⠄⠄⠄⢂⠄\n⠄⠠⠈⡀⠂⠂⠠⠁⡁⢁⠄⠂⡁⠄⠡⡑⡕⡑⡕⢕⠡⠁⠌⠠⢱⢑⢕⢜⢔⠅⠂⡀⢁⠐⠄⠌⠄⠠⠄⠡⠈⠄⠄⢈⠄⠂⠐⡀⠄⢀⠂⠐⠈⡀⢈⠄⡁⠄⢀⠁⡈⠄⠂⢁⠈⡀⠄⠂⠁⡈⢀⠄⠂⠐⢀⠁⡑⡜⡔⡕⡕⡕⢕⢅⢕⢑⠲⡸⡐⡑⠅⡂⠄⢁⠐⠄⠂⡈⢈⠐⠈⡀⠂⠐⡀⠁⠄⢀\n⠄⠂⠁⡀⠄⢁⠐⠄⠄⡀⠂⢁⠠⢐⢨⢢⢱⢸⢘⠄⢂⠡⡈⡌⡎⡪⣊⣊⠢⠁⢂⠠⠄⠄⢁⠄⠡⠄⡁⠐⠈⡀⠂⡀⠂⢁⠐⠄⠄⠠⠄⡁⠐⠄⠄⠠⠄⡐⠄⠄⡀⢁⠈⡀⠄⠠⠄⠂⠁⡀⠄⠠⠁⡈⠄⠄⠐⢅⢣⠣⡃⡇⡇⡆⡑⡐⠅⡣⡪⡪⡑⡔⡀⠄⠂⢁⠐⠄⠄⠠⠁⠠⠈⠠⠄⡈⠠⠄\n⠄⡈⠠⠄⠐⠄⠄⠁⠄⠠⠈⡀⠄⡂⢇⠣⡃⠇⠇⠇⢆⠆⡇⡣⢣⠣⣃⠢⢁⠈⡀⠄⠂⠐⠄⠄⠁⠄⠐⠈⡀⠄⠂⢀⠈⡀⠄⠂⠐⡀⢁⠠⠈⡀⠂⠄⢁⠄⠂⠠⠄⠂⠠⠄⡐⢀⠈⡀⢁⠄⡐⠄⠂⠠⠈⠠⠈⢐⢑⢍⢎⢎⢎⢪⠪⠤⠱⠱⡑⢕⠱⡑⡔⠠⠈⡀⠄⢁⠐⠄⠌⢀⠈⡀⠂⡀⠂⠠\n⠄⠄⠂⢈⠄⡁⠄⠁⡐⢀⠂⡔⡕⢍⠎⠌⡬⠭⢭⠹⢐⢕⢕⢑⠡⡃⠕⠅⠠⠄⠄⠐⢀⠁⡐⠄⡁⠐⠈⡀⠠⠄⠂⡀⠂⡀⠄⢈⠠⠄⠄⠠⠄⠄⠂⠐⠄⠄⠁⠄⢁⠈⡀⠂⠠⠄⠄⠠⠄⠄⢀⠂⠁⡐⠈⡀⠌⠄⡊⠎⠨⠌⡂⡇⢧⠩⢍⢇⢇⠇⠅⡃⢇⢇⢅⠄⠐⠄⠄⢁⠐⠄⠄⢀⠂⠠⠈⠄\n⠄⠐⠈⢀⠠⠄⠐⠠⡐⡰⡱⠱⡑⠅⠊⡌⡪⡊⡎⡬⡨⡪⡘⡀⢂⠐⡈⠄⠂⢁⠠⠁⠠⠄⠄⠂⠠⠈⡀⠄⠂⢈⠄⠄⠂⠄⠄⠠⠄⠂⠐⠄⠂⠐⠈⡀⠁⠄⠁⠐⠄⠄⠠⠈⡀⠂⠐⢀⠁⠐⠄⠄⠁⠠⠄⠄⠐⠄⠂⠡⠈⠂⠌⠪⡅⡥⢢⢃⡣⡙⡄⠌⠢⠣⡣⢣⢑⡈⠄⠠⠄⡁⠐⢀⠐⠄⠌⠄\n⠄⢁⠈⡀⠠⠈⡀⢇⢇⠇⠕⡁⢂⢁⠎⡎⢎⠜⠨⢐⠌⢒⠐⡀⠂⠠⠄⡐⠈⡀⠄⠂⠁⠐⢀⠈⠠⠄⠄⢀⠂⠠⠐⠄⠂⢁⠐⠠⠈⡀⢁⠈⠄⢁⠐⠄⠂⠠⠁⡈⠄⠂⠐⡀⠄⢈⠄⠂⡀⠡⠈⡀⠌⠄⠂⠠⠁⡈⢀⠁⡈⠄⠡⠘⠌⡐⠅⡑⡘⡜⡜⢔⠁⠅⠊⠪⡪⡪⡪⠄⢂⠠⠈⡀⠄⠁⠄⠁\n⠄⠄⠠⠄⠂⠠⠄⠑⠐⠁⠂⠰⡘⡜⢜⠨⠐⠈⠠⠐⠈⡀⠄⠠⠈⡀⠂⡀⠂⡀⠄⠂⢁⠈⡀⠄⢁⠐⠈⢀⠄⠂⠐⠈⠠⠄⡐⠄⠂⠠⠄⡐⠄⠄⡀⢁⠈⡀⠂⡀⠄⢈⠠⠄⠐⠄⠄⢁⠠⠐⠄⠄⠐⠈⡀⠁⠄⠠⠄⠂⠠⠐⢀⠈⠄⠠⠁⠠⠐⠈⠜⢌⢇⢇⠅⠂⠐⡈⠌⠐⠄⠄⠂⢀⠐⠄⠂⠁\n⠄⠂⠠⠁⢈⠠⠈⡀⠡⠈⡀⠡⠈⡈⠠⠄⠂⢁⠐⢀⠁⠠⠐⠄⠂⡀⠂⡀⠂⡀⠄⠂⠠⠄⠄⠐⠄⠐⠈⢀⠠⠁⡈⠄⠂⠁⡀⠄⢁⠐⠄⠄⠂⠠⠄⠄⠠⠄⠂⡀⠐⢀⠠⠈⡀⢁⠐⢀⠠⠐⠄⠂⡈⠄⠄⠂⠐⡀⠌⠄⠂⠐⢀⠐⠄⢂⠈⡀⠂⢁⠈⠄⠨⠐⠄⠌⠠⠄⡐⠈⡀⠂⡈⠄⠄⢁⠈⡀\n⠄⡈⠠⠈⢀⠠⠄⠄⠂⠠⠐⠄⠂⡀⠂⡈⢀⠂⢀⠂⠐⠄⠂⢁⠐⢀⠐⠄⠄⠠⠐⠈⠄⢂⠠⠁⡈⢀⠁⠄⠠⠄⠄⠄⠂⠁⡀⠄⠠⠄⡁⠐⠈⠄⠂⡈⠠⠈⡀⠄⢈⠄⠠⠄⠄⠠⠐⠄⠠⠄⡁⠐⢀⠈⠠⠈⡀⠄⠐⠈⡀⠁⠄⡀⠡⠄⠄⠠⠈⡀⠄⠂⠐⠈⡀⠂⠠⠁⡀⠂⡀⠂⡀⠂⠐⠄⠄⢀\n⠄⠄⠂⠈⡀⠠⠐⢀⠈⠠⠄⠡⠐⠄⡐⠄⠄⠐⠄⠄⢁⠈⠄⠂⠠⠄⠄⢁⠐⠄⠂⢁⠈⡀⠠⠄⠄⠠⠐⠄⠂⠐⠈⡀⠡⠐⠄⡀⠂⠐⢀⠈⡀⠡⠐⠄⠐⠄⠄⠐⠄⠄⠁⡐⠄⢂⠠⠁⠄⠁⠠⠈⢀⠐⠄⠂⡀⠐⢀⠁⠠⠈⡀⠄⠐⠄⢂⠐⠄⠄⠐⠈⡀⢁⠠⠈⡀⠂⡀⠂⢀⠂⠠⠈⡀⠡⠐⠄\n⠄⠐⠈⡀⠄⠂⠐⠄⠄⢁⠈⠠⠄⡁⠠⠐⠄⡁⠐⡀⠂⡀⠂⡈⠄⢂⠐⠄⠄⢁⠈⡀⠄⠄⢂⠐⠈⡀⠄⢁⠈⡀⢁⠠⠄⠂⠐⢀⠈⠄⠂⠠⠄⠂⡀⢁⠈⠄⠂⠁⠐⢀⠁⡀⢈⠄⠠⠐⠄⡁⠐⠈⢀⠄⠡⠐⠄⡈⢀⠐⠄⠂⡀⠐⠈⡀⠂⡀⠁⠄⠁⠄⠠⠄⠄⠂⠠⠐⠄⡈⠄⠄⠂⠠⠄⠂⡀⠁\n","color:#00ff08;background:#000000;");</script>
+  <script src="applogic.js"></script>
+  <script>
+      document.getElementById('quitBtn').addEventListener('click', () => {
+            window.electron.exitApp();
+        });
+
+      document.getElementById('closeBtn').addEventListener('click', () => {
+        window.electron.hideApp();
+        });
+        let clicked = 0;
+        document.getElementById('fullBtn').addEventListener('click', () => {
+          if(clicked ==0) {
+            document.getElementById('bg').style.borderRadius = "0px";
+            document.getElementById("dragBar").classList.remove("dragable");
+            clicked =1;
+          } else {
+            document.getElementById('bg').style.borderRadius = "45px";
+            document.getElementById("dragBar").classList.add("dragable");
+            clicked =0;
+          }
+
+        window.electron.fullApp();
+        });
+
+  </script>
+</body>
+</html>

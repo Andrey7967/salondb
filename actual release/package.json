@@ -1,0 +1,64 @@
+{
+  "name": "salon",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Andrey IT",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .", 
+
+    "dist": "electron-builder"
+
+    
+  },
+  "build": {
+    "appId": "com.salon.id",
+    "productName": "Salon",
+    "directories": {
+      "output": "dist"
+
+    },
+    "files": [
+      "node_modules/**/*",
+      "fonts/**/*",
+      "img/**/*",
+     "Database/**/*",
+      
+      "applogic.js",
+      "bg3.mp4",
+      "style.css",
+      "main.js",
+      "index.html",
+      "preload.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "Database",
+        "to": "Resources/Database",
+        "filter": ["**/*"]
+      }
+    ],
+   
+   "win": {
+      "target": "nsis",
+      "icon": "fan.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Salon"
+   
+    }
+    
+  },
+
+  "devDependencies": {
+    "electron": "^13.0.0",
+    "electron-builder": "^22.9.1"
+  }
+
+}
